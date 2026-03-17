@@ -6,6 +6,14 @@
     <title>Contact - Shreya Bhunia</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="Contact.css">
+    <!-- EmailJS SDK -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            // Replace with your Public Key
+            emailjs.init("4dosISmwBt_vKedQt");
+        })();
+    </script>
     <script src="script.js" defer></script>
 </head>
 <body>
@@ -42,7 +50,7 @@
             </div>
 
             <div class="contact-form-wrapper">
-                <form action="/action" class="contact-form">
+                <form class="contact-form">
                     <div class="input-group">
                         <div class="input-box">
                             <input type="text" id="firstname" required placeholder=" "/>
