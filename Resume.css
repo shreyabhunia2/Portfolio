@@ -1,0 +1,143 @@
+/* Specific styling for Resume Page */
+
+.page-title {
+    font-size: 3.5rem;
+    margin-bottom: 30px;
+    background: linear-gradient(to right, #fff, var(--primary));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-weight: 700;
+}
+
+.resume-container {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 40px;
+    padding: 40px;
+    max-width: 1200px;
+    width: 95%;
+    margin-bottom: 50px;
+    background: rgba(255, 255, 255, 0.03); /* slightly darker glass */
+}
+
+.resume-section h2 {
+    font-size: 2rem;
+    margin-bottom: 25px;
+    color: var(--secondary);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Timeline specific */
+.timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: relative;
+    padding-left: 20px;
+    border-left: 3px solid var(--primary);
+}
+
+.timeline-item {
+    padding: 20px;
+    position: relative;
+    transition: transform 0.3s ease;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.timeline-item:hover {
+    box-shadow: 0 10px 30px rgba(59, 130, 246, 0.2);
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -28.5px;
+    top: 25px;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: var(--bg-color);
+    border: 3px solid var(--primary);
+    box-shadow: 0 0 10px var(--primary);
+}
+
+.timeline-item .year {
+    display: inline-block;
+    padding: 5px 12px;
+    background: rgba(59, 130, 246, 0.2);
+    color: #93c5fd;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.timeline-item h3 {
+    font-size: 1.3rem;
+    margin-bottom: 5px;
+    color: #fff;
+}
+
+.timeline-item p {
+    color: #cbd5e1;
+    margin-bottom: 5px;
+}
+
+.timeline-item .highlight {
+    color: var(--primary);
+    font-weight: 600;
+}
+
+/* Skills specific */
+.skills-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.skill-category {
+    padding: 25px;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.skill-category:hover {
+    box-shadow: 0 10px 30px rgba(236, 72, 153, 0.2);
+}
+
+.skill-category h3 {
+    font-size: 1.4rem;
+    color: #fff;
+    margin-bottom: 15px;
+    border-bottom: 2px solid rgba(255,255,255,0.1);
+    padding-bottom: 10px;
+}
+
+.skill-category ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.skill-category li {
+    position: relative;
+    padding-left: 20px;
+    color: #cbd5e1;
+    font-size: 1.05rem;
+}
+
+.skill-category li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--primary);
+}
+
+@media (max-width: 900px) {
+    .resume-container {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,190 @@
+/* Specific styling for Contact Page */
+
+.page-title {
+    font-size: 3.5rem;
+    margin-bottom: 40px;
+    background: linear-gradient(to right, #fff, var(--primary));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-weight: 700;
+}
+
+.contact-container {
+    display: grid;
+    grid-template-columns: 1fr 1.7fr;
+    gap: 0;
+    max-width: 1100px;
+    width: 90%;
+    margin-bottom: 60px;
+    overflow: hidden;
+}
+
+/* Left info panel */
+.contact-info {
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.2), rgba(236, 72, 153, 0.2));
+    padding: 50px 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    border-right: 1px solid var(--glass-border);
+}
+
+.contact-info h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #fff;
+}
+
+.contact-info > p {
+    color: #94a3b8;
+    line-height: 1.7;
+    font-size: 1rem;
+}
+
+.info-block {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid var(--glass-border);
+    border-radius: 12px;
+    padding: 18px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.info-block:hover {
+    transform: translateX(5px);
+    box-shadow: 0 5px 20px rgba(59, 130, 246, 0.2);
+}
+
+.info-block .icon {
+    font-size: 2rem;
+}
+
+.info-block .details h3 {
+    font-size: 1rem;
+    color: var(--primary);
+    margin-bottom: 4px;
+}
+
+.info-block .details p {
+    color: #cbd5e1;
+    font-size: 1rem;
+}
+
+/* Right form panel */
+.contact-form-wrapper {
+    padding: 50px 40px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+/* Two column row for names */
+.input-group {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+/* Floating label input */
+.input-box {
+    position: relative;
+    width: 100%;
+}
+
+.input-box input,
+.input-box textarea {
+    width: 100%;
+    padding: 18px 16px 8px;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid var(--glass-border);
+    border-radius: 10px;
+    color: #f8fafc;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    outline: none;
+    transition: border-color 0.3s, background 0.3s, box-shadow 0.3s;
+    resize: none;
+}
+
+.input-box textarea {
+    padding-top: 22px;
+    min-height: 120px;
+}
+
+.input-box label {
+    position: absolute;
+    left: 16px;
+    top: 14px;
+    color: #64748b;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    pointer-events: none;
+}
+
+/* Float the label when input has content or is focused */
+.input-box input:focus ~ label,
+.input-box input:not(:placeholder-shown) ~ label,
+.input-box textarea:focus ~ label,
+.input-box textarea:not(:placeholder-shown) ~ label {
+    top: 6px;
+    font-size: 0.75rem;
+    color: var(--primary);
+}
+
+/* Focus state */
+.input-box input:focus,
+.input-box textarea:focus {
+    border-color: var(--primary);
+    background: rgba(59, 130, 246, 0.08);
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15), 0 5px 15px rgba(59, 130, 246, 0.1);
+}
+
+/* Submit button */
+.submit-btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 16px 40px;
+    border-radius: 12px;
+    border: none;
+    font-size: 1.1rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    color: white;
+    background: linear-gradient(135deg, var(--primary), #6366f1);
+    box-shadow: 0 6px 0 #2e4fd1, 0 15px 25px rgba(59, 130, 246, 0.4);
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    text-decoration: none;
+    width: 100%;
+}
+
+.submit-btn:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 0 #2e4fd1, 0 20px 30px rgba(59, 130, 246, 0.5);
+}
+
+.submit-btn:active {
+    transform: translateY(6px);
+    box-shadow: 0 0 0 #2e4fd1, 0 5px 10px rgba(0,0,0,0.4);
+}
+
+@media (max-width: 900px) {
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+    .contact-info {
+        border-right: none;
+        border-bottom: 1px solid var(--glass-border);
+    }
+    .input-group {
+        grid-template-columns: 1fr;
+    }
+}
